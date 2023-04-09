@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
     {% for post in posts %}
-        {{ posts.title }}
-        {{ post.text }}
+        <li>
+            <h2>{{ posts.title }}</h2>
+            <p>{{ post.text|linebreaks|truncatewords:5 }}</p>
+            <a href="{% url 'detail' post.pk %}"><button>Перейти</button>"
+            <hr>
+        </li>
     {% endfor %}
 </body>
 </html>
