@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Login</title>
-    </head>
-    <body>
-        <h2>Login</h2>
-        <form method="post">
+<html>
+<head>
+     <title>Login</title>
+</head>
+<body>
+     <h2>Login</h2>
+          <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit" style="margin: 20px;">login</button>
-        </form>
-    </body>
-</html> 
+            </form>   
+        </body>
+    </html>
